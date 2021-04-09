@@ -7,7 +7,7 @@ export function List() {
 	const [task, setTask] = useState([]);
 	const [userInput, setInput] = useState("");
 	useEffect(() => {
-		fetch('https://assets.breatheco.de/apis/fake/todos/user/roddolfVil')
+		fetch("https://assets.breatheco.de/apis/fake/todos/user/roddolfVil")
 			.then(function(response) {
 				if (!response.ok) {
 					throw Error(response.statusText);
@@ -39,7 +39,7 @@ export function List() {
 			.then(response => {
 				console.log("Success:", response);
 				fetch(
-					'https://assets.breatheco.de/apis/fake/todos/user/roddolfVil'
+					"https://assets.breatheco.de/apis/fake/todos/user/roddolfVil"
 				)
 					.then(function(response) {
 						if (!response.ok) {
@@ -62,7 +62,7 @@ export function List() {
 	const handleKeyDown = e => {
 		if (e.keyCode == 13 && userInput != "") {
 			fetch(
-				'https://assets.breatheco.de/apis/fake/todos/user/roddolfVil',
+				"https://assets.breatheco.de/apis/fake/todos/user/roddolfVil",
 				{
 					method: "POST",
 					body: JSON.stringify({
@@ -84,7 +84,7 @@ export function List() {
 				.then(response => {
 					console.log("Success:", response);
 					fetch(
-						'https://assets.breatheco.de/apis/fake/todos/user/roddolfVil'
+						"https://assets.breatheco.de/apis/fake/todos/user/roddolfVil"
 					)
 						.then(function(response) {
 							if (!response.ok) {
@@ -128,7 +128,7 @@ export function List() {
 			.then(response => {
 				console.log("Success:", response);
 				fetch(
-					'https://assets.breatheco.de/apis/fake/todos/user/roddolfVil'
+					"https://assets.breatheco.de/apis/fake/todos/user/roddolfVil"
 				)
 					.then(function(response) {
 						if (!response.ok) {
@@ -181,17 +181,16 @@ export function List() {
 									X
 								</span>
 							)}
-							{isShown == t.label &&
-								t.done != true && (
-									<i
-										className="fas fa-check"
-										style={{
-											float: "right",
-											color: "green"
-										}}
-										onClick={() => handleDone(t.id)}
-									/>
-								)}
+							{isShown == t.label && t.done != true && (
+								<i
+									className="fas fa-check"
+									style={{
+										float: "right",
+										color: "green"
+									}}
+									onClick={() => handleDone(t.id)}
+								/>
+							)}
 						</li>
 					))
 				)}
