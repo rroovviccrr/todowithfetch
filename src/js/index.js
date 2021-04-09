@@ -17,24 +17,24 @@ ReactDOM.render(<Home />, document.querySelector("#app"));
 
 
 
-fetch('https://assets.breatheco.de/apis/fake/todos/user/roddolfVil', {
-      method: "GET",
-      body: JSON.stringify(todos),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-   .then(function(response) {
-		if (!response.ok) {
-	    throw Error(response.statusText);
-	 }
+//fetch('https://assets.breatheco.de/apis/fake/todos/user/roddolfVil', {
+     // method: "GET",
+     // body: JSON.stringify(todos),//
+     // headers: {
+     //   "Content-Type": "application/json"
+    //  }
+   // })
+  // .then(function(response) {
+	//	if (!response.ok) {
+	 //   throw Error(response.statusText);
+//	 }
     // Read the response as json.
-	    return response.json();
-	 })
-	  .then(function(responseAsJson) {
+//	    return response.json();
+	// })
+//	  .then(function(responseAsJson) {
     // Do stuff with the JSON
-	    console.log(responseAsJson);
-	 })
-    .catch(function(error) {
-	    console.log('Looks like there was a problem: \n', error);
-    });
+	   // console.log(responseAsJson);
+//	 })
+//    .catch(function(error) {
+	//    console.log('Looks like there was a problem: \n', error);//
+//    });
